@@ -19,13 +19,13 @@ input6 = st.number_input("Enter BMI", min_value=0)
 input7 = st.number_input("Enter DiabetesPedigreeFunction", min_value=0.0, step=0.01)
 input8 = st.number_input("Enter Age", min_value=0)
 # Create a button
-button_clicked = st.button("Predict Income")
+button_clicked = st.button("Predict")
 
 # Check if the button is clicked
 if button_clicked:
     user_input = [input1, input2, input3, input4,input5,input6,input7,input8]
     prediction = LR_Model.predict([user_input])
     if prediction[0] == 1:
-        st.write('You have diabetes')
+        st.write('You have high chance of having diabetes')
     else:
-        st.write("You don't have diabetes")
+        st.write("You have low chance of having diabetes")
