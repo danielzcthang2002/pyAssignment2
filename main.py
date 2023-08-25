@@ -7,7 +7,7 @@ import joblib
 # Load the data
 LR_Model = joblib.load("dibetes.pkl")
 
-st.title("Income Prediction")
+st.title("Diabetes Prediction")
 
 # Create two number input fields
 input1 = st.number_input("Enter Pregnancies", min_value=0)
